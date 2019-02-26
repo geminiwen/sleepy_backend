@@ -4,7 +4,8 @@
   "description": "macOS is sleepy now",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "package": "./node_modules/electron-packager/cli.js ./ Sleepy --platform=darwin --icon=assets/sleepy.icns --overwrite --prune=true"
   },
   "repository": "https://github.com/electron/electron-quick-start",
   "keywords": [
