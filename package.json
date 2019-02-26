@@ -9,7 +9,7 @@
   },
   "repository": "https://github.com/eminiwen/sleepy_backend",
   "author": "Gemini",
-  "license": "CC0-1.0",
+  "license": "MIT",
   "devDependencies": {
     "electron": "^4.0.4",
     "electron-packager": "^13.1.0"
