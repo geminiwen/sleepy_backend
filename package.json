@@ -7,15 +7,8 @@
     "start": "electron .",
     "package": "./node_modules/electron-packager/cli.js ./ Sleepy --platform=darwin --icon=assets/sleepy.icns --overwrite --prune=true"
   },
-  "repository": "https://github.com/electron/electron-quick-start",
-  "keywords": [
-    "Electron",
-    "quick",
-    "start",
-    "tutorial",
-    "demo"
-  ],
-  "author": "GitHub",
+  "repository": "https://github.com/eminiwen/sleepy_backend",
+  "author": "Gemini",
   "license": "CC0-1.0",
   "devDependencies": {
     "electron": "^4.0.4",
