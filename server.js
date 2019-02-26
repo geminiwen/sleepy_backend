@@ -17,11 +17,11 @@ module.exports = exports = class Server {
                 switch (command) {
                     case COMMAND_SLEEP: {
                         runtime.exec("pmset displaysleepnow");
-                        socket.write(new Buffer("*"))
-                        socket.end()
+                        socket.write(Buffer.from('*'))
                         break;
                     }
                 }
+                socket.end()
             })
         })
         this.localServer.listen(8999)
