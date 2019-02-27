@@ -1,4 +1,5 @@
 const { ipcRenderer } = require('electron')
+import form from 'antd'
 window.onload = () => {
 
     ipcRenderer.send('renderer-loaded')

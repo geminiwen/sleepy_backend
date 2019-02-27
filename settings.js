@@ -15,7 +15,8 @@ ipcMain.on('renderer-loaded', (event) => {
 module.exports = exports = function () {
     let settingsWindow = new BrowserWindow({
         width: 600,
-        height: 400
+        height: 400,
+        show: false
     })
 
     let saveSettings = () => {

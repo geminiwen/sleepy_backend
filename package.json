@@ -5,13 +5,23 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
+    "static:debug": "webpack --watch",
     "package": "./node_modules/electron-packager/cli.js ./ Sleepy --platform=darwin --icon=assets/sleepy.icns --overwrite --prune=true"
   },
   "repository": "https://github.com/eminiwen/sleepy_backend",
   "author": "Gemini",
   "license": "MIT",
   "devDependencies": {
+    "@babel/core": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
+    "babel-loader": "^8.0.5",
+    "babel-plugin-import": "^1.11.0",
     "electron": "^4.0.4",
-    "electron-packager": "^13.1.0"
+    "electron-packager": "^13.1.0",
+    "webpack": "^4.29.5",
+    "webpack-cli": "^3.2.3"
+  },
+  "dependencies": {
+    "antd": "^3.13.6"
   }
 }
