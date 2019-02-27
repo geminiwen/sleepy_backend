@@ -10,6 +10,7 @@ import ReactDOM from 'react-dom'
 import NetworkPannel from './network_pannel'
 import AboutPannel from './about_pannel'
 import About from './about_pannel';
+import "./settings.css"
 
 const {
     Header, Content, Footer, Sider,
@@ -54,7 +55,7 @@ class Setting extends React.Component {
 
         return (
         <Layout>
-            <Sider style={{overflow: 'auto', height: '100vh', position: 'fixed', left: 0}}>
+            <Sider style={{overflow: 'auto', height: '100vh', position: 'fixed', paddingTop: "30px", left: 0}}>
             <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']} onSelect={this.handlePannelChange}>
                 <Menu.Item key="1">
                     <Icon type="compass" />
@@ -67,7 +68,7 @@ class Setting extends React.Component {
             </Menu>
             </Sider>
             <Layout style={{ marginLeft: 200, height: '100vh' }}>
-            <Content style={{ margin: '16px', overflow: 'initial' }} >
+            <Content style={{ margin: '16px', overflow: 'initial', paddingTop: "10px" }} >
                 {pannelDOM} 
             </Content>
             </Layout>

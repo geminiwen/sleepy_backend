@@ -26,7 +26,8 @@ module.exports = exports = function () {
         show: false,
         // frame: false,
         resizable: false,
-        webPreferences: { devTools: false }
+        titleBarStyle: 'hidden',
+        // webPreferences: { devTools: false }
     })
 
     settingsWindow.on('closed', () => {
