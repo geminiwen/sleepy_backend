@@ -67,8 +67,8 @@ class Setting extends React.Component {
                 </Menu.Item>
             </Menu>
             </Sider>
-            <Layout style={{ marginLeft: 200, height: '100vh' }}>
-            <Content style={{ margin: '16px', overflow: 'initial', paddingTop: "20px" }} >
+            <Layout style={{ marginLeft: 200, height: '100vh', background: "#fff" }}>
+            <Content style={{ margin: '16px', overflow: 'initial' }} >
                 {pannelDOM} 
             </Content>
             </Layout>

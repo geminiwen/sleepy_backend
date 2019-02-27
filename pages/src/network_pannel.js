@@ -5,11 +5,11 @@ import PropTypes from 'prop-types'
 const formItemLayout = {
     labelCol: {
       xs: { span: 24 },
-      sm: { span: 8 },
+      sm: { span: 4 },
     },
     wrapperCol: {
       xs: { span: 24 },
-      sm: { span: 16, offset: 4 },
+      sm: { span: 16 },
     },
   };
 
@@ -30,10 +30,10 @@ class Network extends Component {
         const { getFieldDecorator } = this.props.form;
 
         return (
-            <Form style={{backgroundColor: "#fff", padding: 24, textAlign: "center"}}
+            <Form style={{backgroundColor: "#fff", padding: 24}}
                   onSubmit={this.handleSubmit}>
-                <h2>服务设置</h2>
-                <Form.Item {...formItemLayout}>{
+                <h2 style={{marginBottom: "25px"}}>服务设置</h2>
+                <Form.Item {...formItemLayout} >{
                     getFieldDecorator('host', {
                         initialValue: host
                     })(

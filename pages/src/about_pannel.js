@@ -4,7 +4,8 @@ class About extends Component {
     render() {
         return (
         <div style={{backgroundColor: "#fff", padding: 24, textAlign: "center"}}>
-            Created By 💗️ Gemini.
+            <h2>Your mac is sleepy.</h2>
+            <div>Created By 💗️ Gemini.</div>
         </div>
         )
     }
