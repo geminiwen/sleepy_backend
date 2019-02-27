@@ -6,7 +6,8 @@
   "scripts": {
     "start": "electron .",
     "static:debug": "webpack --watch --mode=development",
-    "package": "./node_modules/electron-packager/cli.js ./ Sleepy --platform=darwin --icon=assets/sleepy.icns --overwrite --prune=true"
+    "static:release": "webpack",
+    "package": "electron-packager ./ Sleepy --platform=darwin --icon=assets/sleepy.icns --overwrite --prune=true"
   },
   "repository": "https://github.com/eminiwen/sleepy_backend",
   "author": "Gemini",
