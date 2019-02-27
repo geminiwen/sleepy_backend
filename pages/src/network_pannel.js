@@ -35,7 +35,10 @@ class Network extends Component {
                 <h2 style={{marginBottom: "25px"}}>服务设置</h2>
                 <Form.Item {...formItemLayout} >{
                     getFieldDecorator('host', {
-                        initialValue: host
+                        initialValue: host,
+                        rules: [{
+                            required: true, message: '请输入绑定的 IP 地址',
+                        }]
                     })(
                         <Input prefix={<Icon type="laptop" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="绑定 IP" />    
                     )
@@ -44,11 +47,13 @@ class Network extends Component {
 
                 <Form.Item {...formItemLayout} >{
                     getFieldDecorator('port', {
-                        initialValue: port
+                        initialValue: port,
+                        rules: [{
+                            required: true, message: '请输入端口号',
+                        }]
                     })(
                         <Input prefix={<Icon type="link" style={{ color: 'rgba(0,0,0,.25)' }} />} 
-                            placeholder="端口号"
-                            type="number" min="1" max="65534" />
+                            placeholder="端口号" />
                     )
                 }
                 </Form.Item>
