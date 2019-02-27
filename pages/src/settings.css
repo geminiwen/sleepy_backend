@@ -5,3 +5,7 @@ body {
 .title {
     color: #ccc;
 }
+
+input[type="text"], input[type="number"] {
+    -webkit-app-region: none 
+}
