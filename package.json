@@ -5,7 +5,7 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "static:debug": "webpack --watch",
+    "static:debug": "webpack --watch --mode=development",
     "package": "./node_modules/electron-packager/cli.js ./ Sleepy --platform=darwin --icon=assets/sleepy.icns --overwrite --prune=true"
   },
   "repository": "https://github.com/eminiwen/sleepy_backend",
@@ -14,14 +14,21 @@
   "devDependencies": {
     "@babel/core": "^7.3.4",
     "@babel/preset-env": "^7.3.4",
+    "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.5",
     "babel-plugin-import": "^1.11.0",
+    "css-loader": "^2.1.0",
     "electron": "^4.0.4",
     "electron-packager": "^13.1.0",
+    "style-loader": "^0.23.1",
     "webpack": "^4.29.5",
     "webpack-cli": "^3.2.3"
   },
   "dependencies": {
-    "antd": "^3.13.6"
+    "@babel/plugin-proposal-class-properties": "^7.3.4",
+    "antd": "^3.13.6",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.3",
+    "react-dom": "^16.8.3"
   }
 }
