@@ -5,7 +5,9 @@ const runtime = require('child_process');
 const COMMAND_SLEEP = 42
 
 module.exports = exports = class Server {
-    constructor() {
+    constructor(host, port) {
+        this.host = host;
+        this.port = port;
         this.createServer();
     }
 
@@ -24,7 +26,13 @@ module.exports = exports = class Server {
                 socket.end()
             })
         })
-        this.localServer.listen(8999)
+
+        this.localServer.listen(this, 
+            (e, count) => { if (e) console.error(e) })
+    }
+
+    stopServer() {
+        this.localServer.close()
     }
 
 }
