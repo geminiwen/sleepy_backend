@@ -23,7 +23,8 @@ function startServer(cb) {
       cb && cb(null);
     } catch(e) { cb(e); }
   } else {
-    cb(new Error("尚未配置"))
+    let error = new Error("尚未配置")
+    cb(error)
   }
 }
 
