@@ -15,25 +15,22 @@ ipcMain.on('renderer-loaded', (event) => {
 let settingsWindow = null
 
 module.exports = exports = function () {
-    if (settingsWindow) return
+    if (settingsWindow) {
+        settingsWindow.focus();
+        return
+    }
 
     settingsWindow = new BrowserWindow({
         width: 800,
         height: 600,
         show: false,
         // frame: false,
-        resizable: false
+        resizable: false,
+        webPreferences: { devTools: false }
     })
-
-    let saveSettings = () => {
-        settingsWindow.close()
-    }
-   
-    ipcMain.on('save-settings', saveSettings)
 
     settingsWindow.on('closed', () => {
         settingsWindow = null
-        ipcMain.removeListener('save-settings', saveSettings)
     })
 
 
